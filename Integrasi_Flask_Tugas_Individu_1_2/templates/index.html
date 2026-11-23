@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Profil Mahasiswa{% endblock %}
+{% block content %}
+<section class="profile-card mx-auto">
+  <div class="profile-top"></div>
+  <img class="avatar" src="{{ url_for('static', filename='img/farid.png.jpeg') }}" alt="Foto Mhasiswa">
+  <p class="eyebrow">PROFIL MAHASISWA</p>
+  <h1>{{ mahasiswa.nama }}</h1>
+  <p class="muted">Mahasiswa {{ mahasiswa.program_studi }}</p>
+  <div class="detail-list">
+    <div><b>NIM</b><span>{{ mahasiswa.nim }}</span></div>
+    <div><b>Program Studi</b><span>{{ mahasiswa.program_studi }}</span></div>
+    <div><b>Universitas</b><span>{{ mahasiswa.universitas }}</span></div>
+    <div><b>Email</b><span>{{ mahasiswa.email }}</span></div>
+    <div><b>IPK</b><span>{{ mahasiswa.ipk }}</span></div>
+  </div>
+  <a class="btn btn-primary mt-3" href="mailto:{{ mahasiswa.email }}">Hubungi Saya</a>
+</section>
+{% endblock %}

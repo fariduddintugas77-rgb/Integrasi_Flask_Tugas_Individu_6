@@ -1,0 +1,266 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --navy: #211b63;
+    --purple: #6d5bd0;
+    --ink: #263247;
+    --muted: #778397;
+    --line: #e8ebf2;
+    --bg: #f4f6fb;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    min-height: 100vh;
+    line-height: 1.7;
+}
+
+button,
+input,
+textarea,
+select,
+a,
+table {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    background: linear-gradient(110deg, #17134b, #302477);
+    padding: 13px 0;
+    box-shadow: 0 4px 16px #17134b20;
+}
+
+.navbar-brand {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+}
+
+.nav-link {
+    color: #d9d5ff !important;
+    margin-left: 10px;
+    border-radius: 7px;
+    padding: 8px 13px !important;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: #ffffff20;
+    color: white !important;
+}
+
+.profile-card,
+.panel {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 17px;
+    box-shadow: 0 10px 35px #2632470b;
+}
+
+.profile-card {
+    position: relative;
+    overflow: hidden;
+    max-width: 620px;
+    text-align: center;
+    padding: 34px 42px 38px;
+}
+
+.profile-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 7px;
+    background: linear-gradient(
+        90deg,
+        #211b63,
+        #806ce0,
+        #c6bdf8
+    );
+}
+
+.avatar {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #f0edff;
+    box-shadow: 0 0 0 2px var(--purple);
+    margin: 4px 0 18px;
+}
+
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.8px;
+    font-weight: 700;
+    color: #8c91a5;
+    margin-bottom: 7px;
+}
+
+.profile-card h1,
+.section-heading h1 {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--navy);
+}
+
+.muted {
+    color: var(--muted);
+    font-weight: 400;
+}
+
+.detail-list {
+    text-align: left;
+    margin: 24px 0 0;
+    border-top: 1px solid var(--line);
+}
+
+.detail-list div {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 10px;
+    padding: 12px 4px;
+    border-bottom: 1px solid #f0f1f6;
+    font-size: 13px;
+}
+
+.detail-list b {
+    color: #40377f;
+    font-weight: 600;
+}
+
+.detail-list span {
+    overflow-wrap: anywhere;
+}
+
+.btn-primary {
+    background: #5144a8;
+    border-color: #5144a8;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 9px 18px;
+}
+
+.btn-primary:hover {
+    background: #3d3289;
+    border-color: #3d3289;
+}
+
+.section-heading {
+    margin-bottom: 22px;
+}
+
+.section-heading h1 {
+    margin-bottom: 6px;
+}
+
+.panel {
+    padding: 22px;
+}
+
+.table {
+    font-size: 12px;
+}
+
+.table thead th {
+    background: #5e55b3;
+    color: white;
+    border: 0;
+    padding: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.table tbody td {
+    padding: 13px;
+    border-color: #eef0f5;
+    font-weight: 400;
+}
+
+.grade {
+    display: inline-block;
+    background: #eeeaff;
+    color: #5144a8;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.stat-card {
+    background: white;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--purple);
+    border-radius: 13px;
+    padding: 20px;
+    box-shadow: 0 7px 24px #26324708;
+}
+
+.stat-card p {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0 0 9px;
+    font-weight: 500;
+}
+
+.stat-card h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 0 0 5px;
+}
+
+.stat-card small {
+    font-size: 11px;
+    color: #9aa2b1;
+}
+
+footer {
+    color: #9098a8;
+    font-size: 12px;
+    font-weight: 400;
+    border-top: 1px solid var(--line);
+    background: #fff;
+}
+
+@media (max-width: 767px) {
+    .profile-card {
+        padding: 30px 20px;
+    }
+
+    .profile-card h1,
+    .section-heading h1 {
+        font-size: 21px;
+    }
+
+    .detail-list div {
+        grid-template-columns: 115px 1fr;
+        font-size: 12px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .panel {
+        padding: 14px;
+    }
+}

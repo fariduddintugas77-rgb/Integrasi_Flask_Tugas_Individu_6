@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Daftar Nilai{% endblock %}
+{% block content %}
+<div class="section-heading"><p class="eyebrow">AKADEMIK</p><h1>Daftar Nilai Mahasiswa</h1><p class="muted">Data mata kuliah dan nilai semester.</p></div>
+<div class="panel table-responsive">
+<table class="table table-hover align-middle mb-0">
+<thead><tr><th>No</th><th>Mata Kuliah</th><th>SKS</th><th>Nilai</th><th>Nilai Mutu</th></tr></thead>
+<tbody>
+{% for item in daftar_nilai %}
+<tr><td>{{ item.no }}</td><td>{{ item.mata_kuliah }}</td><td>{{ item.sks }}</td><td><span class="grade">{{ item.nilai }}</span></td><td>{{ item.angka }}</td></tr>
+{% endfor %}
+</tbody></table>
+</div>
+{% endblock %}
